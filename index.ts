@@ -1,23 +1,28 @@
-type Person = {
+type Address = {
+  code: string;
+  address: string;
+  detailedAddress?: string;
+};
+
+type Author = {
   firstName: string;
   lastName: string;
-  age: number;
+  address: Address;
 };
 
-const existingPerson = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  hobby: "Reading",
+type Poem = {
+  author: Author;
+  title: string;
 };
 
-const person: Person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  hobby: "Reading",
+const poem: Poem = {
+  author: {
+    firstName: "William",
+    lastName: "Shakespeare",
+    address: {
+      code: "SE1 9GF",
+      address: "21 New Globe Walk",
+    },
+  },
+  title: "Sonnet 18",
 };
-
-const person2: Person = existingPerson;
-
-const person3: Person = { ...existingPerson };

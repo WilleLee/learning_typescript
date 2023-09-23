@@ -1,13 +1,7 @@
-var existingPerson = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 30,
-    hobby: "Reading",
+var poem = {
+    author: {
+        firstName: "William",
+        lastName: "Shakespeare",
+    },
+    title: "Sonnet 18",
 };
-var person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 30,
-    hobby: "Reading",
-};
-var person2 = existingPerson;
