@@ -1,28 +1,13 @@
-type Address = {
-  code: string;
-  address: string;
-  detailedAddress?: string;
-};
+const poem =
+  Math.random() > 0.5
+    ? {
+        name: "The Road Not Taken",
+        pages: 5,
+      }
+    : {
+        name: "Stopping by Woods on a Snowy Evening",
+        rhymes: 4,
+      };
 
-type Author = {
-  firstName: string;
-  lastName: string;
-  address: Address;
-};
-
-type Poem = {
-  author: Author;
-  title: string;
-};
-
-const poem: Poem = {
-  author: {
-    firstName: "William",
-    lastName: "Shakespeare",
-    address: {
-      code: "SE1 9GF",
-      address: "21 New Globe Walk",
-    },
-  },
-  title: "Sonnet 18",
-};
+poem;
+// type: { name: string; pages: number; } | { name: string; rhymes: number; }
